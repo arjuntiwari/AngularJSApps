@@ -1,0 +1,64 @@
+﻿<div class="container">
+    <h2><b>Coronavirus Cases:</b></h2>     
+    <p style="color:green;">Last updated: {{today}}</p>
+    <p style="color:blueviolet;">A Quarantine-Person Initiative</p>
+    <marquee width="10%" direction="left" height="30%" >
+        Hi {{Loginname}} Stay Safe and Healthy.
+    </marquee>
+    <p>
+        <!--The .table class adds basic styling (light padding and only horizontal dividers) to a table:-->
+    </p>
+    <table class="table" border="5" bordercolor="grey" align="center">
+        <thead class="thead-light" align="center">
+            <tr>
+                <th>Country</th>
+                <th>Confirmed</th>
+                <th>Recovered</th>
+                <th>Death</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://img.icons8.com/cute-clipart/2x/india.png" alt="" border=3 height=45 width=69></td>
+                <td>{{confirmed}}</td>
+                <td style="color:green;"><b>{{recovered}}</b></td>
+                <td style="color:red;"><b>{{deaths}}</b></td>
+                <td>{{active}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Today Update</h3>
+    <table class="table" border="5" bordercolor="grey" align="center">
+        <thead class="thead-light" align="center">
+            <tr>
+                <th>Confirmed</th>
+                <th>Recovered</th>
+                <th>Death</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{deltaconfirmed}}</td>
+                <td style="color:green;"><b>{{deltarecovered}}</b></td>
+                <td style="color:red;"><b>{{deltadeaths}}</b></td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Know How it Spreads</h1>
+    <ul>
+        <li>There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19).</li>
+        <li><strong>The best way to prevent illness is to avoid being exposed to this virus.</strong></li>
+        <li>
+            The virus is thought to spread mainly from person-to-person.
+            <ul>
+                <li>Between people who are in close contact with one another (within about 6 feet).</li>
+                <li>Through respiratory droplets produced when an infected person coughs, sneezes or talks.</li>
+                <li>These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into
+                    the lungs.</li>
+                <li>Some recent studies have suggested that COVID-19 may be spread by people who are not showing
+                    symptoms.</li>
+            </ul>
+        </li>
+    </ul>
+</div>

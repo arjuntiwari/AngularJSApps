@@ -1,0 +1,43 @@
+<div class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a style="display:none" class="navbar-brand" href="#">WebSiteName</a> -->
+        <a *ngIf="displayElement"><span class="navbar-brand" style="margin-left: -35px"></span><img [src]='photoUrl'
+            height="50px" width="50px"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+              routerLink="/"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/Location"><span class="glyphicon glyphicon-map-marker"></span>Location</a></li>
+          <!--<li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Page 1-1</a></li>
+                       <li><a href="#">Page 2</a></li>
+                          <li><a href="#">Page 1-2</a></li>
+                          <li><a href="#">Page 1-3</a></li>
+                      </ul>
+                  </li>-->
+          <li role="presentation" routerLinkActive="active"><a routerLink="/AboutUs"><span class="glyphicon glyphicon-edit"></span>About Us</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/ContactUs"><span class="glyphicon glyphicon-phone"></span>Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li *ngIf="displayElement"><a mat-button (click)="openSignoutDialog()"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+          <li *ngIf="Logindisplayement"><a mat-button (click)="openAlertDialog()"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+          <li></li>
+          <!--<test></test>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
